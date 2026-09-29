@@ -1,0 +1,21 @@
+* { box-sizing: border-box; margin: 0; padding: 0; font-family: sans-serif; }
+      body { background: #000; display: flex; justify-content: center; align-items: center; height: 100vh; overflow: hidden; }
+      .mobile-frame { width: 390px; height: 844px; background: #1c1917; border-radius: 44px; border: 12px solid #27272a; position: relative; overflow: hidden; display: flex; flex-direction: column; }
+      .status-bar { height: 44px; padding: 0 24px; display: flex; justify-content: space-between; align-items: center; color: white; font-weight: bold; position: absolute; top:0; width: 100%; z-index: 10; }
+      .camera-bg { flex: 1; background: linear-gradient(135deg, #14532d, #064e3b); display: flex; flex-direction: column; align-items: center; justify-content: center; }
+      .viewfinder { width: 250px; height: 250px; border: 4px dashed rgba(255,255,255,0.5); position: relative; }
+      .laser { width: 100%; height: 4px; background: #22c55e; box-shadow: 0 0 15px #22c55e; position: absolute; top: 0; display: none; }
+      .laser.active { display: block; animation: scan 1.5s infinite linear alternate; }
+      @keyframes scan { from { top: 0; } to { top: 246px; } }
+      .inst { color: white; margin-top: 30px; font-weight: bold; background: rgba(0,0,0,0.5); padding: 10px 20px; border-radius: 20px; }
+      .controls { height: 140px; background: #000; display: flex; justify-content: center; align-items: center; }
+      #capture-btn { width: 80px; height: 80px; border-radius: 40px; border: none; background: white; padding: 4px; cursor: pointer; }
+      .inner { width: 100%; height: 100%; border-radius: 50%; border: 2px solid #000; }
+      #capture-btn:active .inner { background: #e5e5e5; }
+      .bottom-sheet { position: absolute; bottom: -400px; left: 0; width: 100%; height: 350px; background: white; border-radius: 30px 30px 0 0; padding: 24px; transition: bottom 0.4s ease; display: flex; flex-direction: column; }
+      .bottom-sheet.show { bottom: 0; }
+      .sheet-handle { width: 40px; height: 6px; background: #e2e8f0; border-radius: 3px; margin: 0 auto 20px; }
+      .bottom-sheet h2 { font-size: 24px; color: #0f172a; margin-bottom: 10px; }
+      .badge { align-self: flex-start; background: #dcfce7; color: #16a34a; padding: 6px 12px; border-radius: 12px; font-weight: bold; font-size: 14px; margin-bottom: 20px; }
+      .treatment { color: #475569; font-size: 16px; line-height: 1.5; margin-bottom: 40px; flex: 1; }
+      #reset-btn { background: #22c55e; color: white; border: none; padding: 16px; border-radius: 16px; font-size: 18px; font-weight: bold; cursor: pointer; }
